@@ -18,6 +18,7 @@
     </head>
     <body>
         <h1>Sign Up</h1>
+        <h3>Already have an account ? Click <a href="signin.php">here</a></h3>
         <form class="form signup">
             <div class="form-group"
                  <label for="name">Name</label>
@@ -49,6 +50,7 @@
                 <input type="password" class="form-control" name="repasswd" id="repasswd"/>
             </div>
             <input type="submit" class="btn" value="Sign Up"/>
+            <input type="reset" class="btn" value="Reset"/>
         </form>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
