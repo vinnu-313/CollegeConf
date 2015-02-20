@@ -1,17 +1,35 @@
 <?php
 include 'connection.php';
 session_start();
-if(isset($_POST['uname']) && isset($_POST['passwd'])){
-    if($_POST['uname'] == 'admin' && $_POST['passwd'] == 'admin'){
+$valid = false;
+if(isset($_POST['email']) && isset($_POST['passwd'])){
+    if($_POST['email'] == 'admin@admin.com' && $_POST['passwd'] == 'admin'){
         $_SESSION['role'] = 'admin';
         $_SESSION['uname'] = 'Administrator';
-        header('Location:adminhome.php');
+        $valid = true;
     }else{
-        echo "select * from user where uname = '$_POST[uname]'";
-        $res = $mysqli->query("select * from user where uname = '$_POST[uname]'");
-        
+        echo "select * from user where email = '$_POST[email]'";
+        $res = $mysqli->query("select * from user where email = '$_POST[email]'");        
+        while($row = $res->fetch_assoc()){
+            echo $row['name'].' : '. $row['passwd'];
+            if($row['passwd'] == $_POST['passwd']){
+                echo 'Match Found';
+                $_SESSION['role'] = 'user';
+                $_SESSION['uname'] = $row['name'];
+                $valid = true;
+            }
+        }
     }
 }else{
     echo 'ERR_0';
+}
+if($valid){
+    if($_SESSION['role'] == 'admin'){
+        header('Location:ahome.php');
+    }else{
+        header('Location:uhome.php');
+    }
+}else{
+    header('Location:signin.php?err=1');
 }
 ?>
