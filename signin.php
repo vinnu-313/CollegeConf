@@ -17,39 +17,18 @@
         <![endif]-->
     </head>
     <body>
-        <h1>Sign Up</h1>
-        <h3>Already have an account ? Click <a href="signin.php">here</a></h3>
-        <form class="form signup">
-            <div class="form-group"
-                 <label for="name">Name</label>
-                <input type="text" class="form-control" name="uname" id="name"/>
-            </div>
+        <h1>Sign In</h1>
+        <h3>Don't have an account ? Click <a href="signup.php">here</a></h3>
+        <form class="form signin" method="POST" action="session.php">
             <div class="form-group"
                  <label for="email">Email Address</label>
                 <input type="email" class="form-control" name="email" id="email"/>
             </div>
             <div class="form-group">
-                <label for="mobile">Mobile</label>
-                <input type="phone" class="form-control" name="mobile" id="mobile"/>
-            </div>
-            <div class="form-group">
-                <label for="category">Category</label>
-                <select class="form-control" name="utype" id="utype">
-                    <option value="-1">Select</option>
-                    <option value="RnD" selected>R &amp; D/Corporate/Industrial Firms</option>
-                    <option value="scholars">Faculty/Research Scholars</option>
-                    <option value="students">UG/PG Students</option>
-                </select>
-            </div>
-            <div class="form-group">
                 <label for="passwd">Password</label>
                 <input type="password" class="form-control" name="passwd" id="passwd"/>
             </div>
-            <div class="form-group">
-                <label for="repasswd">Retype Password</label>
-                <input type="password" class="form-control" name="repasswd" id="repasswd"/>
-            </div>
-            <input type="submit" class="btn" value="Sign Up"/>
+            <input type="submit" class="btn" value="Sign In"/>
             <input type="reset" class="btn" value="Reset"/>
         </form>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
