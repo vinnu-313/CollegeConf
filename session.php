@@ -23,7 +23,7 @@ if(isset($_POST['email']) && isset($_POST['passwd'])){
     }
 //    echo $_SESSION['role'].' - '.!!$valid;
 }else{
-//    echo 'ERR_0';
+    echo 'ERR_0';
 }
 if($valid){
     if($_SESSION['role'] == 'admin'){

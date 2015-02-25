@@ -23,8 +23,8 @@
                 <div class="navbar-header">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Upload<span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">View All</a></li>
-                        <li><a href="#">Sign Out</a></li>
+                        <li><a href="vall.php">View All</a></li>
+                        <li><a href="signout.php">Sign Out</a></li>
                     </ul>             
                 </div>
             </div>
